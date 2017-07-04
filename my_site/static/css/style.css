@@ -1,0 +1,18 @@
+header {
+    min-height: 800px;
+    background-image: url('/static/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.header-content {
+    text-align: center;
+    margin-top: 20%;
+}
+
+
+.header-content > p {
+    color: #fff;
+}
+
