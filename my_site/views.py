@@ -4,8 +4,6 @@ from django.http import HttpResponse
 
 
 class IndexView(ListView):
-    pass
+    template_name = 'my_site/index.html'
+    queryset = {}
 
-
-def index_view(request):
-    return HttpResponse('Hello word')
