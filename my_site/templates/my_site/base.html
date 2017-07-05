@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}{% endblock %}| Incredible web-applications</title>
 </head>
@@ -15,83 +16,57 @@
 <body>
     <header>
         <nav class="navbar sticky-top navbar-toggleable navbar-inverse bg-inverse">
-            <a href="#" class="navbar-brand">IWA</a>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="{% url 'index' %}" class="navbar-brand">IWA</a>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <div class="header-content">
             <p class="h2">
-                Incredible web-applications
+                INCREDIBLE WEB-APPLICATIONS
             </p>
-            <p class="h4">
-                We will implement your dreams
+            <p class="h5">
+                WE WILL MAKE YOUR DREAMS COME TRUE
             </p>
+            <button type="button" class="btn btn-danger btn-lg">FIND OUT MORE</button>
+        </div>
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+    </header>
+    <footer class="bg-inverse">
+        <div class="footer-content">
+            <a href="https://github.com/Vladiio/personal_site">
+                <span class="fa fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/vlad.mashkin.39">
+                <span class="fa fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+            </a>
+            <p>Kharkiv, Ukraine 2017 IWA <i class="fa fa-copyright"></i></p>
 
         </div>
+    </footer>
 
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> {% block content %}{% endblock %}
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
