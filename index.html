@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -8,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>{% block title %}{% endblock %}| Incredible web-applications</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Incredible web-applications</title>
 </head>
 
 <body>
@@ -44,9 +43,7 @@
             </p>
             <button type="button" class="btn btn-danger btn-lg">FIND OUT MORE</button>
         </div>
-    <section>
-        {% block content %}{% endblock %}
-    </section>
+    <section></section>
     </header>
     <footer class="bg-inverse">
         <div class="footer-content">
